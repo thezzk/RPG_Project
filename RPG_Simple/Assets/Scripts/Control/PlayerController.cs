@@ -1,6 +1,5 @@
 ﻿using RPG.Combat;
 using RPG.Movement;
-using System;
 using UnityEngine;
 
 namespace RPG.Control
@@ -19,7 +18,10 @@ namespace RPG.Control
             foreach (RaycastHit hit in hits)
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target == null) continue;
+                if(!GetComponent<Fighter>().CanAttack(target))
+                {
+                    continue;
+                }
 
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -49,5 +51,6 @@ namespace RPG.Control
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }
+
     }
 }
