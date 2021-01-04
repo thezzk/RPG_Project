@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
 using RPG.Saving;
+using RPG.Resources;
 
 namespace RPG.Movement
 {
@@ -15,10 +15,16 @@ namespace RPG.Movement
 
         NavMeshAgent navMeshAgent;
         Health health;
-        private void Start()
+
+        private void Awake() 
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
+        }
+
+        private void Start()
+        {
+         
         }
 
         private void Update()
@@ -67,7 +73,7 @@ namespace RPG.Movement
         {
             Dictionary<string, object> data = (Dictionary<string, object>) state;
             
-            GetComponent<NavMeshAgent>().Warp(((SerializableVector3)data["position"]).ToVector());
+            navMeshAgent.Warp(((SerializableVector3)data["position"]).ToVector());
             transform.eulerAngles = ((SerializableVector3)data["rotation"]).ToVector();
             
         }

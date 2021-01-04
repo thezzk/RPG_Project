@@ -14,6 +14,19 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.82, z: 0}
+--- !u!114 &3977300459592827082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183952465389541968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cea4b04e799a0a46aaacb41ce3e9847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
 --- !u!114 &8090783522064709674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +160,27 @@ PrefabInstance:
       propertyPath: leftHandTransform
       value: 
       objectReference: {fileID: 8241322735737460955}
+    - target: {fileID: 7555268514929147735, guid: 6097f1cdcde46bc43bc271707101a410,
+        type: 3}
+      propertyPath: characterClass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555268514929147735, guid: 6097f1cdcde46bc43bc271707101a410,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555268514929147735, guid: 6097f1cdcde46bc43bc271707101a410,
+        type: 3}
+      propertyPath: levelUpParticleEffect
+      value: 
+      objectReference: {fileID: 7676888937794963318, guid: a890cb2e170e24040a0baf4eca96c830,
+        type: 3}
+    - target: {fileID: 7555268514929147735, guid: 6097f1cdcde46bc43bc271707101a410,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5326765697780813964, guid: 6097f1cdcde46bc43bc271707101a410,
         type: 3}
       propertyPath: uniqueIdentifier

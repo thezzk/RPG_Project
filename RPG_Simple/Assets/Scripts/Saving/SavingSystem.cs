@@ -77,6 +77,7 @@ namespace RPG.Saving
 
         private void RestoreState(Dictionary<string, object> state)
         {
+            //print("Restore " + Time.frameCount);
             foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
             {
                 string id = saveable.GetUniqueIdentifier();
